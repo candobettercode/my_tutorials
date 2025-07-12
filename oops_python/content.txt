@@ -1,0 +1,4 @@
+class and objects
+class has attributes and functions/methods
+code walk through
+attributes get called, methods are called manually
