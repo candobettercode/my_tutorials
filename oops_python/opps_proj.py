@@ -11,12 +11,12 @@ class chatbook:
         print("2. Signup")
         print("3. Write a post")
         print("4. Send a message")
-        print("4. Exit")
+        print("5. Exit")
         choice = input("Enter your choice: ")
         if choice == '1':
-            pass #self.login()
+            self.signin()
         elif choice == '2':
-            pass #self.register()
+            self.signup()
         elif choice == '3':
             pass #self.write_post()
         elif choice == '4':
@@ -28,4 +28,30 @@ class chatbook:
             print("Invalid choice. Please try again.")
             self.menu()
 
-obj = chatbook()
+    def signup(self):
+        email = input("Enter your email: ")
+        password = input("Enter your password: ")
+        self.username = email 
+        self.password = password
+        print("Signup successful! You can now login.")
+        print("\n")
+        self.menu()
+
+    def signin(self):
+        if self.username == "" or self.password == "":
+            print("Please signup first.")
+        else:
+            print("Signin to your account")
+            email = input("Enter your email: ")
+            password = input("Enter your password: ")
+            if email == self.username and password == self.password:
+                self.logged_in = True
+                print("Signin successful!")
+                print("\n")
+                self.menu()
+            else:
+                print("Invalid credentials. Please try again.")
+        print("\n")
+        self.menu()
+
+obj = chatbook() 
