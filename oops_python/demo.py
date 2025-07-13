@@ -17,3 +17,11 @@ print(f"Length of the list: {len_list}")   # Output: Length of the
 user1 = chatbook()
 user1.send_message("Hello, how are you?")  # Assuming send_message is implemented 
 
+# using static methods
+chatbook.set_id(1001)
+
+user1 = chatbook()
+print(user1.id)
+
+
+

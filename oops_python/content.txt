@@ -8,3 +8,5 @@
     > encapsulation
     > getter and setter
     > static methods
+6. Inheritence
+7. Decorators
