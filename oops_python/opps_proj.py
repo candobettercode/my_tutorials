@@ -3,7 +3,8 @@ class chatbook:
         self.username = ""
         self.password = ""
         self.logged_in = False
-        self.menu()
+        print(id(self))
+        # self.menu()
 
     def menu(self):
         print("Welcome to Chatbook!")
@@ -20,13 +21,21 @@ class chatbook:
         elif choice == '3':
             pass #self.write_post()
         elif choice == '4':
-            pass #self.send_message()
+            self.send_message()
         elif choice == '5':
             print("Exiting Chatbook. Goodbye!")
             exit()
         else:
             print("Invalid choice. Please try again.")
             self.menu()
+
+    @staticmethod
+    def get_id():
+        return chatbook.__user_id
+    
+    @staticmethod
+    def set_id(value):
+        chatbook.__user_id = value
 
     def signup(self):
         email = input("Enter your email: ")
@@ -53,5 +62,9 @@ class chatbook:
                 print("Invalid credentials. Please try again.")
         print("\n")
         self.menu()
+
+    def send_message(self,msg):
+        pass
+ 
 
 obj = chatbook() 
